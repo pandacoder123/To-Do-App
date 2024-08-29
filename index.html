@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1b1b1b;
+        color: #f9f9f9;
+        margin: 0;
+        margin-top: 18%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      /* Container for tasks */
+      .task-container {
+        width: 100%;
+        max-width: 500px;
+        background-color: #626262;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      /* Task list items */
+      li {
+        list-style: none;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ececec;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      /* Remove task button */
+      li button {
+        background-color: #ff6b6b;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      li button:hover {
+        background-color: #e63946;
+      }
+
+      /* Input styles */
+      #taskInput {
+        width: calc(100% - 110px);
+        padding: 10px;
+        border: 1px solid #c6c6c6;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+        background-color: #8c8d8d;
+        margin-right: 10px;
+        transition: border-color 0.3s ease;
+      }
+
+      #taskInput::placeholder {
+        color: white;
+        font-size: large;
+      }
+
+      #taskInput:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      /* Add task button */
+      #addButton {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #addButton:hover {
+        background-color: #0056b3;
+      }
+
+      /* Heading styles */
+      h1 {
+        color: #007bff;
+        position: absolute;
+        top: 15px;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+    <div class="task-container"></div>
+    <br />
+    <input type="text" id="taskInput" placeholder="Type your task here..." />
+    <button id="addButton">Add Task</button>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
