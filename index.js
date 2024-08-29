@@ -10,13 +10,13 @@ import {
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDR41FrkWcmxS5CKxWwtCGAgTlxb5mrJYo",
-  authDomain: "task-manager-2d410.firebaseapp.com",
-  databaseURL: "https://task-manager-2d410-default-rtdb.firebaseio.com",
-  projectId: "task-manager-2d410",
-  storageBucket: "task-manager-2d410.appspot.com",
-  messagingSenderId: "297015841491",
-  appId: "1:297015841491:web:e87acb07fd798da762fa26",
+  apiKey: process.env.APIKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.dbURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
   measurementId: "G-WW3LKDKFWX",
 };
 
